@@ -33,14 +33,14 @@ export const App = () => {
 
   return (
     <FeedbackSection>
-      <Section title="Будь ласка, залиште відгук">
+      <Section title="Please, leave your feedback">
         <FeedbackOptions
           options={['good', 'neutral', 'bad']}
           onLeaveFeedback={handleFeedback}
         />
       </Section>
 
-      <Section title="Статистика">
+      <Section title="Statistics">
         {totalFeedback > 0 ? (
           <Statistics
             good={good}
@@ -50,7 +50,7 @@ export const App = () => {
             positivePercentage={positiveFeedbackPercentage}
           />
         ) : (
-          <Notification message="Немає відгуків" />
+          <Notification message="There's no feedback!" />
         )}
       </Section>
     </FeedbackSection>
